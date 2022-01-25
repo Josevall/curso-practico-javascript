@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Porcentajes y Descuentos | Curso Práctico de JavaScript en Platzi</title>
+    <style>
+      :root {
+            --Black: #1d1c1c;
+            --gray: #b6afaf;
+            --light-gray: #dad2d2;
+            --fucsia: #8a0c83;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            background-image: url(./Images/slashes.jpg);
+        }       
+        .tittle {
+            display: grid;
+            text-align: center;
+            padding: 0.25rem 0.25rem;
+            margin-bottom: 44px;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 0.2rem;
+            color: white;
+        }
+        .main-container {
+            margin: auto;
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1, 1fr;
+            margin-inline-start: 30px;
+            margin-inline-end: 30px;
+            margin-block-end: 100px;
+        }
+        .container1 {
+            align-items: center;
+            display: inline-grid;
+            background-color: #b6afaf80;
+            border-radius: 8px;
+            justify-items: center;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;  
+        }
+        .container2 {
+            align-items: center;
+            display: inline-grid;
+            background-color: #b6afaf80;
+            border-radius: 8px;
+            justify-items: center;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        form {
+          align-content: center;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin-bottom: 30px;
+        }
+        label {
+          align-self: center;
+        }
+        .form-container {
+          display: flex;
+          align-items: center;
+        }
+        input {
+          padding: 4px 10px;
+        }
+        button {
+          background: #006eb1;
+          color: white;
+          border-radius: 8px;
+          border: #7d22f3;
+          padding: 10px 30px;
+          margin-top: 16px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        @media screen and (min-width: 660px) {  
+          .main-container {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 100px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="tittle">
+            <p>Porcentajes y Descuentos</p>    
+        </div>  
+    </header>
+
+    <section class="main-container">
+        <section class="container1">
+            <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+            <form>
+                <label for="inputPrice">Escribe el precio de tu producto:</label>
+                <input id="inputPrice" type="number" placeholder="Precio">
+        
+                <label for="inputDiscount">Escribe el descuento de tu producto:</label>
+                <input id="inputDiscount" type="number" placeholder="%Descuento">
+        
+                <button type="button" onclick="onClickButtonPriceDiscount()">
+                    Calcular el precio con descuento
+                </button>
+        
+                <p id="ResultPrice"></p>
+            </form>
+        </section> 
+    
+        <section class="container2">
+            <h2>Calcula el precio a pagar de tus productos con cupon</h2>
+            <form>
+                <label for="inputPriceC">Escribe el precio de tu producto:</label>
+                <input id="inputPriceC" type="number" placeholder="Precio">
+        
+                <label for="inputCoupon">Escribe el cupon de tu producto:</label>
+                <input id="inputCoupon" type="text" placeholder="basico, especial, premium">
+        
+                <button type="button" onclick="onClickButtonPriceCoupon()">
+                    Calcular el precio con descuento
+                </button>
+
+                <p id="ResultPriceC"></p>
+        </section>
+        
+        </form>
+    </section>
+
+    <script src="./descuentos.js"></script>
+</body>
+</html>
