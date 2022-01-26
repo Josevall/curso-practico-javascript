@@ -72,17 +72,20 @@ function alturaTriangulo(ladoI1, ladoI2, baseI) {
         const cateto = (baseI / 2) ** 2;
         const hipotenusa = (ladoI1) ** 2;
         const altura = Math.sqrt(hipotenusa - cateto);
-        console.log(altura);
+        //console.log(altura);
+        return altura
     }
     else {
         alert("No lo se)")
     }
 }
 function areaTrianguloI(ladoI1, ladoI2, baseI) {
-    const Altura = alturaTriangulo(ladoI1, ladoI2, baseI);
-    return Altura * baseI;
+    let altura = alturaTriangulo(ladoI1, ladoI2, baseI);
+
+    return (baseI * altura) / 2;
     
 }
+
 
 function perimetroTrianguloI(ladoI1, ladoI2, baseI) {
     return ladoI1 + ladoI2 + baseI;

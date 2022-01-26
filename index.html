@@ -1,56 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Curso Practico de JavasCript</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+  <style>
+      :root {
+            --Black: #1d1c1c;
+            --gray: #b6afaf;
+            --light-gray: #dad2d2;
+            --fucsia: #8a0c83;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            /*background-image: url(./Images/slashes.jpg);
+            box-sizing: border-box;
+            background-attachment: fixed;
+            background-size: cover;
+            display: grid;
+            text-align: center;
+            gap: 50px;*/
+        }       
+
+        .tittle {
+            display: grid;
+            text-align: center;
+            padding: 0.25rem 0.25rem;
+            margin-bottom: 44px;
+            font-size: 16px;
+            font-weight: bold;  
+            color: #12796e;
+        }
+
+        
+        .main-container {
+            margin: auto;
+            display: grid;
+            gap: 32px;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;   
+            
+        }
+        
+        
+        .container {
+            place-content: center;
+            align-items: center;
+            display: inline-grid;
+            border: solid 2px #00b1df;
+            border-radius: 8px;
+            justify-items: center;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;  
+            width: 300px;
+            height: 240px;
+            
+        }
+
+        
+        
+        ul {
+            list-style: none;
+            justify-tracks: center;
+        }
+        a {
+            color: green;
+            text-decoration: none;
+
+            
+        }
+        img {
+            height: 140px;
+            border-radius: 16px;
+            object-fit: cover;
+            width: 70%;
+            margin-top: 12px;
+        }
+
+        @media screen and (min-width: 660px) {  
+          .main-container {
+            display: grid;
+            gap: 32px;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 100px;
+          }
+        }
+     
+  </style>
 </head>
 <body>
-    <header>
-        <header>
-            Talleres del curso practico de JavasCript
-        </header>
-        <p>Estos retos fueron desarrollados por JoseVall</p>
+    <header class="tittle">
+        <h1> Talleres del curso practico de JavaScript</h1>
+        <p>Estos retos fueron realizados por Jose Valles</p>
+        <p>Puede acceder a cualquiera de ellos dando click en los titulos</p>
     </header>
+       
 
     <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./Figuras.html"> Taller 1</a>
-                </li>
-            </ul>
+        <nav class="main-container">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="./Figuras.html">Taller#1 Fuguras Geometricas</a>
+                        
+                </ul>
+                <img src="./Images/Schermata-2019-07-22-alle-17.33.23.jpg" alt="figuras">
+            </div>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="./descuentos.html">Taller#2 Descuentos</a>
+                        
+                    </li>
+                </ul>
+                <img src="https://www.dolistore.com/3795-thickbox_default/Descuentos.jpg" alt="descuentos">
+            </div>
 
-            <ul>
-                <li>
-                    <a href="./descuentos.html"> Taller 2</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="./promedio.html">Taller#3a Promedio</a>
+                        
+                    </li>
+                </ul>
+                <img src="https://es.calcuworld.com/wp-content/uploads/sites/2/2020/02/media-aritmetica.png" alt="promedio">
+            </div>
 
-            <ul>
-                <li>
-                    <a href="./promedio.html"> Taller 3a</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="./mediana.html">Taller#3b Mediana</a>
+                        
+                    </li>
+                </ul>
+                <img src="./Images/mediana.png" alt="mediana">
+            </div>
 
-            <ul>
-                <li>
-                    <a href="./mediana.html"> Taller 3b</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="moda.html">Taller#3c Moda</a>
+                    </li>
+                </ul>
+                <img src="data:image/jpeg;base64,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" alt="moda">
 
-            <ul>
-                <li>
-                    <a href="moda.html"> Taller 3c</a>
-                </li>
-            </ul>
+            </div>
 
-            <ul>
-                <li>
-                    <a href="salarios.html"> Taller 4</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="salarios.html">Taller#4 Salarios</a>
+                    </li>
+                </ul>
+                <img src="data:image/jpeg;base64,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" alt="salarios">
+
+            </div>
         </nav>
     </section>
 </body>

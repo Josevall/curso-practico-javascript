@@ -13,29 +13,31 @@
             --Black: #1d1c1c;
             --gray: #b6afaf;
             --light-gray: #dad2d2;
-            --fucsia: #e30052
+            --fucsia: #8a0c83;
         }
         body {
             font-family: 'Quicksand', sans-serif;
             margin: 0;
+            background-image: url(./Images/slashes.jpg);
         }       
-        nav {
+        .tittle {
             display: grid;
             text-align: center;
-            background: var(--Black);
-            border-bottom: solid 10px var(--fucsia);
-            padding: 2rem 1rem;
-            margin-bottom: 24px;
-        }
-        .tittle {
-            font-size: var(--lg);
+            padding: 0.25rem 0.25rem;
+            margin-bottom: 44px;
+            font-size: 32px;
+            font-weight: bold;
             letter-spacing: 0.2rem;
             color: white;
         }
-        .subtittle {
-            font-size: var(--md);
-            color: white;
-            margin-top: -5vh;
+        .main-container {
+            margin: auto;
+            display: grid;
+            gap: 32px;
+            grid-template-columns: 1, 1fr;
+            margin-inline-start: 30px;
+            margin-inline-end: 30px;
+            margin-block-end: 100px;
         }
         .main-container {
             margin: auto;
@@ -49,43 +51,49 @@
         .container1 {
             align-items: center;
             display: inline-grid;
-            background-color: var(--light-gray);
-            border: 8px solid var(--fucsia);
-            box-shadow: -8px 8px 0 0 var(--Black);
+            background-color: #b6afaf80;
+            border-radius: 8px;
             justify-items: center;
             padding-inline-start: 10px;
-            padding-inline-end: 10px; 
+            padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;  
         }
         .container2 {
             align-items: center;
             display: inline-grid;
-            background-color: var(--light-gray);
-            border: 8px solid var(--fucsia);
-            box-shadow: -8px 8px 0 0 var(--Black);
+            background-color: #b6afaf80;
+            border-radius: 8px;
             justify-items: center;
             padding-inline-start: 10px;
             padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;
         }
+
         .container3 {
             align-items: center;
             display: inline-grid;
-            background-color: var(--light-gray);
-            border: 8px solid var(--fucsia);
-            box-shadow: -8px 8px 0 0 var(--Black);
+            background-color: #b6afaf80;
+            border-radius: 8px;
             justify-items: center;
             padding-inline-start: 10px;
             padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;  
         }
         .container4 {
             align-items: center;
             display: inline-grid;
-            background-color: var(--light-gray);
-            border: 8px solid var(--fucsia);
-            box-shadow: -8px 8px 0 0 var(--Black);
+            background-color: #b6afaf80;
+            border-radius: 8px;
             justify-items: center;
             padding-inline-start: 10px;
             padding-inline-end: 10px;
+            font-size: 16px;
+            font-weight: bold;
         }
+        
         img {
           width: 88px;
           height: 88px;
@@ -104,16 +112,19 @@
         .form-container {
           display: flex;
           align-items: center;
-          
         }
         input {
           padding: 4px 10px;
         }
         button {
-          background: var(--gray);
-          color: var(--Black);
-          border: 2px solid var(--Black);
-          padding: 5px 30px;
+          background: #006eb1;
+          color: white;
+          border-radius: 8px;
+          border: #7d22f3;
+          padding: 10px 30px;
+          margin-top: 16px;
+          font-size: 16px;
+          font-weight: bold;
         }
 
         @media screen and (min-width: 660px) {  
@@ -131,22 +142,15 @@
 
 <body>
   <header>
-      <nav>
-          <div class="tittle">
-              <h1>
-                Figuras Geométricas
-            </h1>
-         </div>
-         <div class="subtittle">
-             <p>Este es el primer taller del curso práctico de JavaScript</p>
-         </div>
-      </nav>
-  </header>
+    <div class="tittle">
+        <p>Figuras Geometricas</p>    
+    </div>  
+</header>
   <section class="main-container">
 
     <section class="container1">
         <h2>Calcula el área y perímetro de un cuadrado</h2>
-        <img src="./images/cuadrado.jpg" alt="cuadrado">
+        <img src="./Images/cuadrado.jpg" alt="cuadrado">
         <form class="form-container">
           <p>Escribe cuánto mide cada lado de tu cuadrado:</p>
           <label for="InputCuadrado">
@@ -167,14 +171,18 @@
     
       <section class="container2">
         <h2>Calcula el área y perímetro de un triangulo</h2>
-        <img src="./images/Triangulo.jpg" alt="triangulo">
+        <img src="./Images/Triangulo.jpg" alt="triangulo">
         <form class="form-container">
           <Div>
             <p>Escribe cuánto mide cada lado de tu triangulo:</p>
+          </Div> 
+          <div>
+
             <label for="InputTriangulo1">
               <input id="InputTriangulo1" type="number" placeholder="Lado1" />
             </label>
-          </Div> 
+          </div>
+          
           <div>
             <label for="InputTriangulo2">
               <input id="InputTriangulo2" type="number" placeholder="Lado2"/>
@@ -207,7 +215,7 @@
     
       <section class="container3">
         <h2>Calcula el área y perímetro de un circulo</h2>
-        <img src="./images/circulo.jpg" alt="Circulo">
+        <img src="./Images/circulo.jpg" alt="Circulo">
         <form class="form-container">
           <label for="InputCirculo">
             Escribe cuánto mide el radio del circulo:
@@ -227,14 +235,17 @@
 
       <section class="container4">
         <h2>Calcula el área y perímetro de un triangulo Isósceles</h2>
-        <img src="./images/Triangulo.jpg" alt="triangulo-isosceles">
+        <img src="./Images/Triangulo.jpg" alt="triangulo-isosceles">
         <form class="form-container">
           <Div>
             <p>Escribe cuánto mide cada lado de tu triangulo:</p>
+          </Div>
+          <div>
             <label for="InputTrianguloI1">
               <input id="InputTrianguloI1" type="number" placeholder="LadoI1"/>
             </label>
-          </Div> 
+          </div>
+            
           <div>
             <label for="InputTrianguloI2">
               <input id="InputTrianguloI2" type="number" placeholder="LadoI2"/>
